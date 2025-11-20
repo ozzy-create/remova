@@ -1,12 +1,9 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-const basePath = isGitHubPages ? '/remova2' : '';
 
 const nextConfig: NextConfig = {
   output: isGitHubPages ? 'export' : undefined,
-  basePath: basePath,
-  assetPrefix: basePath ? `${basePath}` : undefined,
   images: {
     unoptimized: true, // Required for static export
   },
